@@ -27,7 +27,15 @@ public class Delivery {
     private Address address;
 
     @Enumerated(EnumType.STRING)
-    private DeliveryStatus sttus;
+    private DeliveryStatus status;
+
+    public Delivery() {
+    }
+
+    public Delivery(Address address) {
+        this.address = address;
+        this.status = DeliveryStatus.READY;
+    }
 
     public Long getId() {
         return id;
@@ -45,11 +53,19 @@ public class Delivery {
         this.order = order;
     }
 
-    public DeliveryStatus getSttus() {
-        return sttus;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setSttus(DeliveryStatus sttus) {
-        this.sttus = sttus;
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public DeliveryStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(DeliveryStatus status) {
+        this.status = status;
     }
 }
