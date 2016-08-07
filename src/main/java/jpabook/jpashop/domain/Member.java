@@ -52,4 +52,12 @@ public class Member {
     public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
+
+    public Address getAdress() {
+        return adress;
+    }
+
+    public void setAdress(Address adress) {
+        this.adress = adress;
+    }
 }
